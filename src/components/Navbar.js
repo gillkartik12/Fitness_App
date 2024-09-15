@@ -19,7 +19,7 @@ const containsText = currentUrl.includes(searchText);
 const Navbar = () => {
   return (
     <Stack direction="row" justifyContent="space-around" 
-    sx={{gap: {sm: '122px', xs:'40px'}, mt: {sm:'32px',
+    sx={{gap: {sm: '122px', xs:'0px'}, mt: {sm:'32px',
       xs:'20px'
     }, justifyContent:'none'
   }} px="20px"
@@ -41,9 +41,9 @@ const Navbar = () => {
       <a href="#exercises" onClick={() => ExerciseTabClick(window.location.pathname)} style={{
         textDecoration: 'none', color: '#3A1212'
       }}>Exercises</a>
-      <a href="/calorie" style={{
+      <a href="/Fitness_App/calorie" style={{
         textDecoration: 'none', color: '#3A1212'
-      }}>Calorie Calculator</a>
+      }}>Calories</a>
     </Stack>
     </Stack>
     

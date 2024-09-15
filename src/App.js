@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/Fitness_App/" element={<Home />} />{" "}
         {/*to setup home page using route*/}
-        <Route path="/exercise/:id" element={<ExerciseDetail />} />{" "}
+        <Route path="/Fitness_App/exercise/:id" element={<ExerciseDetail />} />{" "}
         {/*here :id means we can dynamically id like 1,2,3 etc*/}
         <Route path="/Fitness_App/calorie" element={<CalorieCalculator />} />
       </Routes>

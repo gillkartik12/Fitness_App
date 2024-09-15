@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography, Button, Stack } from "@mui/material";
+import { Typography, Button, Stack, Box } from "@mui/material";
 
 const calculateCalories = (weight, height, age, activityLevel, setCalories) => {
   // Assuming the user is female; adjust for male if needed
@@ -17,15 +17,22 @@ const CalorieCalculator = () => {
   const [activityLevel, setActivityLevel] = useState("1.2"); // Sedentary as default
   const [calories, setCalories] = useState(null);
   return (
-    <Link className="calorie-calculate" to="/Fitness_App/calorie">
-      <div className="App" style={{
-           marginTop: '60px'
-         }}>
-      
-        <h1><span style={{color:"#ff2625", fontSize:"38px"}}>Calorie Calculator</span></h1>
+    <Box id="calorie" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
+      <Typography variant="h4" mb="46px" style={{ textDecoration: "#000000" }}>
+        Calculate your daily calories intake by filling the below information.
+      </Typography>
+      <Box className="App" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
+        <h1>
+          <span style={{ color: "#ff2625", fontSize: "38px" }}>
+            Calorie Calculator
+          </span>
+        </h1>
         <div>
           <label>
-          <span style={{color:"#000000", fontSize:"18px"}}>Age (years):</span>
+            <span style={{ color: "#000000", fontSize: "18px" }}>
+              Age (years):
+            </span>
+            &nbsp;&nbsp;
             <input
               type="number"
               value={age}
@@ -35,7 +42,9 @@ const CalorieCalculator = () => {
         </div>
         <div>
           <label>
-          <span style={{color:"#000000", fontSize:"18px"}}>Weight (kg):</span>
+            <span style={{ color: "#000000", fontSize: "18px" }}>
+              Weight (kg):
+            </span> &nbsp;&nbsp;
             <input
               type="number"
               value={weight}
@@ -45,7 +54,9 @@ const CalorieCalculator = () => {
         </div>
         <div>
           <label>
-          <span style={{color:"#000000", fontSize:"18px"}}> Height (cm):</span>
+            <span style={{ color: "#000000", fontSize: "18px" }}>              
+              Height (cm):
+            </span> &nbsp;&nbsp;
             <input
               type="number"
               value={height}
@@ -55,7 +66,9 @@ const CalorieCalculator = () => {
         </div>
         <div>
           <label>
-          <span style={{color:"#000000", fontSize:"18px"}}>Activity Level:</span>
+            <span style={{ color: "#000000", fontSize: "18px" }}>
+              Activity Level:
+            </span> &nbsp;&nbsp;
             <select
               value={activityLevel}
               onChange={(e) => setActivityLevel(e.target.value)}
@@ -76,7 +89,7 @@ const CalorieCalculator = () => {
             </select>
           </label>
         </div>
-        <button 
+        <button
           onClick={() =>
             calculateCalories(weight, height, age, activityLevel, setCalories)
           }
@@ -85,13 +98,20 @@ const CalorieCalculator = () => {
         </button>
         {calories !== null && (
           <div>
-            <h2>Estimated Daily Calorie Needs: <span style={{
-          color:"#ff2625"
-         }}>{calories} kcal</span></h2>
+            <h2>
+              Estimated Daily Calorie Needs:{" "}
+              <span
+                style={{
+                  color: "#ff2625",
+                }}
+              >
+                {calories} kcal
+              </span>
+            </h2>
           </div>
         )}
-      </div>
-    </Link>
+      </Box>
+    </Box>
   );
 };
 

@@ -7,15 +7,7 @@ import Logo from '../assets/images/Logo.png';
 {/**mt= margin top, sm= small device, xs = extra small device, */}
 
 
-const ExerciseTabClick = (currentUrl) => {
- const searchText = "/calorie";
-const containsText = currentUrl.includes(searchText);
-  if(containsText){
-    window.location.href = "/Fitness_App/#exercises";
-  } else  {    
-    window.location.href = "#exercises";
-  }
-}
+
 const Navbar = () => {
   return (
     <Stack direction="row" justifyContent="space-around" 
@@ -38,10 +30,10 @@ const Navbar = () => {
       <Link to="/Fitness_App/" style={{textDecoration: 'none',
         color: '#3A1212', borderBottom: '3px solid #FF2625'
       }}>Home</Link>
-      <a href="#exercises" onClick={() => ExerciseTabClick(window.location.pathname)} style={{
+      <a href="#exercises"  style={{
         textDecoration: 'none', color: '#3A1212'
       }}>Exercises</a>
-      <a href="/Fitness_App/calorie" style={{
+      <a href="#calorie" style={{
         textDecoration: 'none', color: '#3A1212'
       }}>Calories</a>
     </Stack>

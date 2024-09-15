@@ -7,7 +7,7 @@ import ExerciseDetail from "./pages/ExerciseDetail";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import CalorieCalculator from "./pages/CalorieCalculator";
+import CalorieCalculator from "./components/CalorieCalculator";
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
         {/*to setup home page using route*/}
         <Route path="/Fitness_App/exercise/:id" element={<ExerciseDetail />} />{" "}
         {/*here :id means we can dynamically id like 1,2,3 etc*/}
-        <Route path="/Fitness_App/calorie" element={<CalorieCalculator />} />
       </Routes>
       <Footer />
     </Box>

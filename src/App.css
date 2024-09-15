@@ -152,14 +152,15 @@ body {
 }
 
 .App {
-  background: #ffffff;
-  margin: 0 auto;
+  background:-o-repeating-linear-gradient();
+  margin: 5 auto;
 
-  max-width: 600px;
+  max-width: 2000px;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
+  text-decoration:black;
 }
 
 h1 {

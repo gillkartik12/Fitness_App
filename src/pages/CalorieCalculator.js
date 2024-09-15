@@ -17,7 +17,7 @@ const CalorieCalculator = () => {
   const [activityLevel, setActivityLevel] = useState("1.2"); // Sedentary as default
   const [calories, setCalories] = useState(null);
   return (
-    <Link className="calorie-calculate" to={`/Fitness_App/calorie`}>
+    <Link className="calorie-calculate" to="/Fitness_App/calorie">
       <div className="App" style={{
            marginTop: '60px'
          }}>

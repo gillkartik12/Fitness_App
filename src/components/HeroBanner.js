@@ -2,6 +2,7 @@ import React from 'react';
 import {Box,Button,Stack} from '@mui/material';
 import {Typography} from '@mui/material';
 import HeroBannerImage from '../assets/images/banner.png'
+
 {/* Typography is an MUI component that standardizes all the categories of text. It maintains consistency with respect to size, font family, color, etc. among all the variants of text like title, subtitle, caption, etc. throughout your application.  */}
 
 const HeroBanner = () => {

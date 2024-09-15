@@ -11,7 +11,7 @@ const [exercises, setExercises] = useState([]);
   return (
     <Box>
       <HeroBanner />
-      <SearchExercises setExercises= {setExercises} bodyPart= {bodyPart} setBodyPart={setBodyPart}/>
+      <SearchExercises setExercises= {setExercises} bodyPart= {bodyPart} setBodyPart={setBodyPart} />
       <Exercise setExercises= {setExercises} bodyPart= {bodyPart} exercises={exercises} />
     </Box>
   )

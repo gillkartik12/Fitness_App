@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Box, Button, Stack, TextField, Typography} from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData'; 
 import HorizontalScrollbar from './HorizontalScrollbar';
+import { Link } from 'react-router-dom';
 
 const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
 
@@ -37,6 +38,16 @@ if(search) {
 }
 } 
 
+const handleSearchWithEnterKey = (e) => {
+      if (e.key === "Enter"){
+        e.preventDefault();
+        handleSearch();
+        window.location.href = "#exercises";
+      }
+    }
+  
+
+
   return (
     <Stack alignItems='center' mt="37px"
     justifyContent="center" p="20px"
@@ -61,6 +72,7 @@ if(search) {
         height = "76px"
         value={search}
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
+        onKeyDown={handleSearchWithEnterKey}
         placeholder="SearchExercises"
         type="text"
         />
@@ -75,7 +87,8 @@ if(search) {
           position: "absolute",
           right: '0'
         }}
-        onClick={handleSearch}
+        onClick={handleSearch}        
+        href="#exercises"
         >
           Search
         </Button>
